@@ -12,3 +12,4 @@ Allow: /
 
 User-agent: *
 Allow: /
+Sitemap: https://render-frontend-ayesh.onrender.com/sitemap.xml
