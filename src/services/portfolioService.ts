@@ -151,7 +151,7 @@ class PortfolioService {
     }
     
     // For local development, prepend the API URL
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://render-backend-ayesh.onrender.com/api';
     const baseUrl = apiUrl.replace('/api', ''); // Remove '/api' since we need the base server URL
     return `${baseUrl}${imagePath}`;
   }

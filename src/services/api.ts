@@ -1,5 +1,5 @@
 // Make sure this file exists and exports the API_BASE_URL
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://render-backend-ayesh.onrender.com/api';
 
 class AuthService {
   async login(email: string, password: string, role: string): Promise<any> {

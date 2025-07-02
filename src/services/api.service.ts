@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with base URL
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5000/api', // This is your backend URL
+  baseURL: 'https://render-backend-ayesh.onrender.com/api', // This is your backend URL
   withCredentials: false, // Set to true if using cookies
   headers: {
     'Content-Type': 'application/json',

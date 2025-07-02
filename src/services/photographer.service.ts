@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://render-backend-ayesh.onrender.com/api';
 
 /**
  * Service for handling photographer-related API requests
@@ -12,7 +12,7 @@ class PhotographerService {
     if (imagePath.startsWith('http')) return imagePath;
     
     // For local development, prepend the API URL
-    const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const apiBaseUrl = import.meta.env.VITE_API_URL || 'https://render-backend-ayesh.onrender.com/api';
     const baseUrl = apiBaseUrl.replace('/api', ''); // Remove '/api' to get the server root
     return `${baseUrl}${imagePath}`;
   }
