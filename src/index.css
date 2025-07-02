@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 41 35% 88%; /* Light beige #EFE4D2 */
+    --foreground: 222 60% 19%; /* Navy blue #254D70 for text */
+
+    --card: 41 35% 88%; /* Light beige */
+    --card-foreground: 222 60% 19%; /* Navy blue */
+
+    --popover: 41 35% 88%;
+    --popover-foreground: 222 60% 19%;
+
+    --primary: 222 60% 19%; /* Navy blue #254D70 */
+    --primary-foreground: 41 35% 88%; /* Light beige #EFE4D2 */
+
+    --secondary: 232 60% 19%; /* Dark navy #131D4F */
+    --secondary-foreground: 41 35% 88%; /* Light beige */
+
+    --muted: 41 25% 70%; /* Lighter beige */
+    --muted-foreground: 222 40% 40%; /* Lighter navy */
+
+    --accent: 16 54% 38%; /* Rust brown #954C2E */
+    --accent-foreground: 41 35% 88%; /* Light beige */
+
+    --destructive: 16 54% 38%; /* Rust brown for destructive actions */
+    --destructive-foreground: 41 35% 88%; /* Light beige */
+
+    --border: 222 30% 80%;
+    --input: 222 30% 80%;
+    --ring: 222 60% 19%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 41 35% 88%;
+    --sidebar-foreground: 222 60% 19%;
+    --sidebar-primary: 222 60% 19%;
+    --sidebar-primary-foreground: 41 35% 88%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 232 60% 19%; /* Dark navy #131D4F */
+    --foreground: 41 35% 88%; /* Light beige #EFE4D2 */
+
+    --card: 232 60% 19%; /* Dark navy */
+    --card-foreground: 41 35% 88%; /* Light beige */
+
+    --popover: 232 60% 19%;
+    --popover-foreground: 41 35% 88%;
+
+    --primary: 222 60% 19%; /* Navy blue */
+    --primary-foreground: 41 35% 88%; /* Light beige */
+
+    --secondary: 16 54% 38%; /* Rust brown */
+    --secondary-foreground: 41 35% 88%; /* Light beige */
+
+    --muted: 232 40% 30%;
+    --muted-foreground: 41 20% 70%;
+
+    --accent: 16 54% 38%; /* Rust brown */
+    --accent-foreground: 41 35% 88%; /* Light beige */
+
+    --destructive: 16 54% 38%; /* Rust brown */
+    --destructive-foreground: 41 35% 88%; /* Light beige */
+
+    --border: 232 40% 30%;
+    --input: 232 40% 30%;
+    --ring: 222 60% 19%;
+
+    /* Sidebar colors in dark mode */
+    --sidebar-background: 232 60% 24%;
+    --sidebar-foreground: 41 35% 88%;
+    --sidebar-primary: 222 60% 19%;
+    --sidebar-primary-foreground: 41 35% 88%;
+    /* ...rest of the variables */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+.image-gallery {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.image-gallery-item {
+  @apply relative overflow-hidden rounded-lg;
+  aspect-ratio: 1/1;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.image-gallery-item img {
+  @apply w-full h-full object-cover;
+}
